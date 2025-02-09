@@ -93,6 +93,9 @@ header{
     background: var(--text-color);
     transition: background 0.4s ease-in-out;
 }
+.moblie-login{
+    display: none;
+}
 /* Menu Icon*/
 .menu-icon{
     display: flex;
@@ -454,4 +457,297 @@ header{
     width:100px;
     height: 85px;
     object-fit: contain;
+}
+.tips-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+.blogs{
+    display: grid;
+    gap: 1rem;
+}
+.blog-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--text-neutral-2);
+    padding: 10px;
+    border-radius: 1rem;
+}
+.blog-box img{
+    width: 130px;
+    height: 130px;
+    object-fit: over;
+    border-radius: 1rem;
+}
+.blog-info span{
+    background: var(--second-color);
+    color: var(--main-color);
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+}
+.blog-info h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 1rem;
+    cursor: pointer;
+}
+.read{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-neutral);
+}
+.read p{
+    font-size: 0.9rem;
+}
+.single-post{
+    position: relative;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.single-post img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.single-post-text{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--bg-color);
+    padding: 20px;
+    background: linear-gradient(
+        1deg,
+    hsl(128 26% 55%/ 100%)14%,
+    hsl(128 24% 55%/ 4%)73%);
+    backdrop-filter: blur(2px);
+}
+.single-post-text h2{
+    font-size: 0.94rem;
+    margin-bottom: 6px;
+}
+.post-data .read{
+    color: var(--bg-color);
+}
+.single-post a i{
+    color: var(--bg-color);
+    padding: 8px;
+    border: 1px solid var(--bg-color);
+    border-radius: 50%;
+}
+.links{
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    gap: 8px;
+
+}
+.link-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid var(--text-neutral-2);
+    padding: 8px 14px;
+    border-radius: 1.5rem;
+}
+.link-box h3{
+    font-size: 0.87rem;
+    font-weight: 600;
+}
+.link-box a i{
+    background: var(--second-color);
+    color: var(--main-color);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+.link-box a i:hover{
+    background: var(--text-color);
+    color: var(--bg-color);
+    transition: all 0.4s ease-in-out;
+}
+.footer{
+    background: var(--text-neutral-3);
+    padding: 50px 0;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap:  1rem;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+.footer-box h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.footer-box h3 span{
+    color: var(--main-color);
+}
+.footer-link{
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 1rem;
+}
+.footer-link::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-link:hover{
+    color: var(--main-color);
+    transition: 0.3s;
+}
+.footer-center{
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+.footer-center p{
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.social a i {
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 12px;
+}
+.social a i:hover{
+    background: var(--text-color);
+    transition: background 0.4s ease-in-out;
+}
+
+/* Making Responsive */
+@media (max-width: 1080px){
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .product-content {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+}
+@media (max-width: 920px){
+    section {
+        padding: 2rem 0;
+    }
+    .product-content, .tips-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .link-box{
+        padding: 1rem;
+    }
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 795px){
+    header{
+        top: 15px;
+    }
+    .menu-icon{
+        display: flex;
+    }
+    .login-btn{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .open-menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .nav-link{
+        display: block;
+        margin: 1rem 0;
+    }
+    .moblie-login{
+        display: initial;
+    }
+}
+@media (max-width: 685px){
+    .product-content{
+        padding: 20px;
+    }
+    .backpack{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .backpack-contant{
+        order: 2;
+    }
+    .backpack-contant h2{
+        font-size: 2rem;
+    }
+    .backpack-grid{
+        width: 50px;
+        top: -20px;
+        left: 12px;
+    }
+}
+@media (max-width: 605px){
+    .product-content, .tips-content, .footer-container{
+        grid-template-columns: 1fr;
+    }
+    .single-post{
+        height: 380px;
+    }
+    .footer-center{
+        order: 3;
+    }
+}
+@media (max-width: 400px){
+    .logo img{
+        width: 100px;
+    }
+    .category-content{
+        margin-top: 2rem;
+    }
+    .selling-heading h2, .heading{
+        font-size: 1.2rem;
+    }
 }

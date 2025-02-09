@@ -1,8 +1,10 @@
+//menu open close
 let menu = document.querySelector('.menu-icon');
-
+let navbar = document.querySelector('.navbar');
 
 menu.onclick=()=>{
     menu.classList.toggle("move");
+    navbar.classList.toggle("open-menu");
 }
 
 // Category
@@ -76,3 +78,15 @@ var swiper = new Swiper(".selling-slider", {
         },
     }
   });
+// Scrool Reveal Animation
+const animate = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: '2500',
+  delay: '400',
+});
+
+animate.reveal(".nav, .heading, .hero-content h2");
+animate.reveal('.backpack-contant',{origin:'left'});
+animate.reveal('.hero-img img,.btn,.btn img,.backpack img,.single-post',{origin:'bottom'});
+animate.reveal('.category-box, .product-box,.brand-box,.blog-box,.link-box,.footer-box h3,.footer-box a,.footer-box p',{interval: 100});
